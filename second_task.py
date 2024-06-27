@@ -5,19 +5,19 @@ from decimal import Decimal
 from typing import Callable, Generator
 
 
-def generator_numbers(text: str) -> Generator:
+def generator_numbers(text: str) -> Generator[float, float, float]:
     """
     Генерує всі дійсні числа з заданого тексту.
 
     :param text: Вхідний текст, що містить дійсні числа, розділені пробілами.
     :return: Генератор, що ітерує по всіх дійсних числах у тексті.
     """
-    pattern = r'\d+.\d+'
+    pattern = r'\d+\.\d+'
     for num in re.findall(pattern, text):
         yield Decimal(num)
 
 
-def sum_profit(text: str, func: Callable) -> Decimal:
+def sum_profit(text: str, func: Callable[[str], Generator[float, float, float]]) -> float:
     """
     Обчислює загальну суму чисел у вхідному рядку.
 
