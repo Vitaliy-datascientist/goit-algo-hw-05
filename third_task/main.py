@@ -4,7 +4,8 @@
    2 - (не обов'язково) бажаний для перегляду рівень логування."""
 
 import sys
-from functions import load_logs, count_logs_by_level, display_log_counts, filter_logs_by_level, display_log_level
+from third_task.functions import load_logs, count_logs_by_level, display_log_counts, filter_logs_by_level, \
+    display_log_level
 
 
 def main():

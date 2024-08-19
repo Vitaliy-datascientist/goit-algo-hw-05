@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "goit-algo-hw-05"
+version = "0.1.0"
+description = ""
+authors = ["Vitaliy-datascientist <vitaliy.dayneko2410@gmail.com>"]
+packages = [
+    { include = "first_task" },
+    { include = "second_task" },
+    { include = "third_task" }
+]
+[tool.poetry.dependencies]
+python = "^3.12"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
